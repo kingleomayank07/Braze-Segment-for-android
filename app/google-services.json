@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "387820051422",
+    "firebase_url": "https://brazedemo-85c2f.firebaseio.com",
+    "project_id": "brazedemo-85c2f",
+    "storage_bucket": "brazedemo-85c2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387820051422:android:86a12664b10d2e3e82db4f",
+        "android_client_info": {
+          "package_name": "com.example.brazedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387820051422-9r5hreqt9vl3qcqhgmaqn200ri6eknig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brazedemo",
+            "certificate_hash": "cba049f474627d4ba20cea7908bddd2478968bce"
+          }
+        },
+        {
+          "client_id": "387820051422-dbe85jtp577a2t3k04f5gnpbo875o2rv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy9WBrfspqXuDN4UHFSVi9YqCzRF4WbzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387820051422-dbe85jtp577a2t3k04f5gnpbo875o2rv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
