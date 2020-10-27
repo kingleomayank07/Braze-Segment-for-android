@@ -1,10 +1,9 @@
 package com.example.brazedemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.segment.analytics.Analytics
-import com.segment.analytics.Properties
+import androidx.appcompat.app.AppCompatActivity
+import com.appboy.Appboy
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,23 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button = findViewById<Button>(R.id.click)
-
-        button.setOnClickListener {
-
-            Analytics.with(applicationContext)
-                .track("Full Name", Properties().putName("Mayank Malhotra"))
-
-            Analytics.with(applicationContext)
-                .track("Currency", Properties().putCurrency("INR"))
-
-            Analytics.with(applicationContext)
-                .track("Gender", Properties().putCurrency("Male"))
-
-            Analytics.with(applicationContext)
-                .track("Price", Properties().putCurrency("20$"))
-
-
+        Appboy.getInstance(applicationContext).subscribeToContentCardsUpdates {
+            var count = 0
+            for (i in 0.until(it.cardCount)) {
+                if (it.allCards[i].extras.containsKey("feed_type")) {
+                    val feedType = it.allCards[i].extras["feed_type"]
+                    val desiredFeedType = "Delhi"
+                    if (desiredFeedType == feedType) {
+                        count++
+                    }
+                }
+            }
+            headline.text = count.toString()
         }
     }
 }
